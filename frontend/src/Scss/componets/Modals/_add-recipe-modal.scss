@@ -1,0 +1,17 @@
+.add-recipe-modal{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .close-modal{
+    // styles in _modals.scss
+    width: 1.285em;
+    align-self: flex-end;
+  }
+
+  .main-view-modal{
+    // styles in _modals.scss
+    display: flex;
+    flex-direction: column;
+  }
+}
