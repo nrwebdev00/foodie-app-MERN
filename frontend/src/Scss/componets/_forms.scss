@@ -8,6 +8,7 @@
   border: 0;
   outline: 0;
   border-radius: .5em;
+  padding-left: 1em;
 
   &:focus,&::after,&::before{
     content: '';
@@ -18,12 +19,30 @@
 
 }
 .form-group{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin-top: 3.5%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 30% 70%;
   gap: 1em;
 }
 
+.form-group-btn{
+  width: 100%;
+  margin: 6em auto;
+}
+
+.form-container{
+  max-width: 131em;
+  margin: 0 auto;
+}
+
+.form-label{
+  font-size: var(--fs-700);
+  font-weight: var(--fw-regular);
+  letter-spacing: 1px;
+  color: var(--text-primary-color);
+  text-align: left;
+}
 
 // Header and Primary Search Bar Css
 .form-search{
@@ -37,6 +56,5 @@
   .form-input-search{
     width: 60%;
     height: 40%;
-    padding-left: 1em;
   }
 }

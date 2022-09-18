@@ -29,6 +29,15 @@
   cursor: pointer;
 }
 
+.submit-btn{
+  width: 100%;
+  font-size: var(--fs-700);
+  border: 3px solid var(--primary-darker-color);
+  background-color: var(--primary-lighter-color);
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
 
 // Hover Effect
 .raise-up-hover-effect{

@@ -1,21 +1,38 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import { Link, useNavigate } from 'react-router-dom';
 
 import { HiOutlineMenu } from 'react-icons/hi';
+import { HiLogout } from 'react-icons/hi';
 
+import { logout } from '../../actions/userActions';
 import SearchBar from '../Forms/SearchBar';
 import MenuModal from '../Modals/MenuModal';
 import ModalsBtnsHeader from '../Modals/ModalsBtnsHeader';
 import Logo from '../../Img/logo.svg';
 
 function Header() {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [menu, setMenu ] = useState(false);
   const [mediaMenu, setMediaMenu ] = useState(false);
-  // Dev only
-  const [ loggedIn, setLoggedIn] = useState(true)
+  const [ loggedIn, setLoggedIn] = useState(false);
+
+  const userLogin = useSelector((state) => state.userLogin)
+  const { userInfo } = userLogin
+
+  const logoutUser =()=>{
+    dispatch(logout())
+    navigate('/login')
+  }
 
   useEffect(() =>{
+    if(userInfo){
+      setLoggedIn(true)
+    }else{
+      setLoggedIn(false)
+    }
     const handleWindowResize = () =>{
       setWindowWidth(window.innerWidth)
       if(windowWidth < 768){
@@ -30,7 +47,7 @@ function Header() {
     return () => {
       window.removeEventListener('resize', handleWindowResize)
     }
-  }, [])
+  }, [userInfo, setLoggedIn])
 
   const CheckForSmallScreenSize = () =>{
     if(windowWidth < 768){
@@ -62,6 +79,7 @@ function Header() {
       {loggedIn ?
         <div className='header-user-wrapper'>
           <Link to='profile'>Profile</Link>
+          <HiLogout onClick={logoutUser} className='fs-700' />
         </div>
           :
         <div className='header-user-wrapper'>

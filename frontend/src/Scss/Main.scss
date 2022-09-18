@@ -20,6 +20,7 @@
 @import './componets/forms';
 @import './componets/image-grid';
 @import './componets/dynamic-sidebar';
+@import './componets/message';
   // Modals
   @import './componets/Modals/modal';
   @import './componets/Modals/header-menu-modal';
@@ -27,3 +28,5 @@
   @import './componets/Modals/add-recipe-modal';
 
 // Pages
+@import './pages/login-register';
+@import './pages/profile';

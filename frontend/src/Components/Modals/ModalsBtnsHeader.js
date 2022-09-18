@@ -7,8 +7,6 @@ function ModalsBtnsHeader() {
   const [ addRecipeModal, setAddRecipeModal ] = useState(false);
   const [addArticleModal, setAddArticleModal ] = useState(false);
 
-  console.log(`Recipe Modal ${addRecipeModal}`)
-  console.log(`Article Modal ${addArticleModal}` )
   return (
     <div className='modal-wrapper'>
       <div
