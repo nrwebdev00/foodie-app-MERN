@@ -22,6 +22,8 @@ function Header() {
   const userLogin = useSelector((state) => state.userLogin)
   const { userInfo } = userLogin
 
+  console.log(userInfo.role)
+
   const logoutUser =()=>{
     dispatch(logout())
     navigate('/login')
@@ -78,13 +80,13 @@ function Header() {
       <div className="header-user header-main-item | padding-right-4">
       {loggedIn ?
         <div className='header-user-wrapper'>
-          <Link to='profile'>Profile</Link>
+          <Link to='/profile'>Profile</Link>
           <HiLogout onClick={logoutUser} className='fs-700' />
         </div>
           :
         <div className='header-user-wrapper'>
-          <Link to='register/'>Register</Link>
-          <Link to='login/'>Login</Link>
+          <Link to='/register'>Register</Link>
+          <Link to='/login'>Login</Link>
         </div>
       }
       </div>

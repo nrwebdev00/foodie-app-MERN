@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 import Message from '../Components/Message.js';
 import { login } from '../actions/userActions.js';
@@ -65,6 +65,9 @@ const handleSubmit=(e)=>{
           </div>
           <div className="form-group-btn">
             <input type="submit" value="Login" className='btn submit-btn raise-up-hover-effect' />
+          </div>
+          <div className="form-group-links">
+            <Link to='/register' className='fs-650'>To Register With the Foodie App Click Here.</Link>
           </div>
         </form>
       </div>

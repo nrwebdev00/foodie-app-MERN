@@ -16,14 +16,39 @@
     border: 0;
     background-color: var(--primary-lighter-color);
   }
-
 }
+.form-input-error{
+  border: 2px solid var(--warn-darker-color);
+  background-color: var(--warn-lighter-color);
+  color: var(--text-warn-color);
+
+  &:focus, &::after, &::before{
+    content:'';
+    outline: var(--warn-darker-color);
+  }
+}
+.form-group-links{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  a{
+    text-align: center;
+  }
+}
+
 .form-group{
   margin-top: 3.5%;
   width: 100%;
   display: grid;
   grid-template-columns: 30% 70%;
   gap: 1em;
+}
+.form-group-flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
 }
 
 .form-group-btn{

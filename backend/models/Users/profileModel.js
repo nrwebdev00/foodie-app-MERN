@@ -35,7 +35,13 @@ const profileSchema = mongoose.Schema(
     twitchUrl:{
       type: String
     },
-    websiteUrl:{
+    printerestUrl:{
+      type: String
+    },
+    instagramUrl:{
+      type: String
+    },
+    websitetURL:{
       type: String
     },
     location:{

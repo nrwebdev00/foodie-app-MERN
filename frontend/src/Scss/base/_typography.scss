@@ -2,7 +2,6 @@ h1{
   font-family: var(--ff-default);
   font-size: var(--fs-900);
   font-weight: var(--fw-medium);
-  line-height: var(--lh-900);
   letter-spacing: 2px;
   color: inherit;
 }
@@ -27,7 +26,7 @@ h3{
 
 h4{
   font-family: var(--ff-default);
-  font-size: var(--fs-600);
+  font-size: var(--fs-650);
   font-weight: var(--fw-regular);
   line-height: var(--lh-600);
   letter-spacing: 1px;
@@ -100,6 +99,9 @@ small{
 }
 .fs-600{
   font-size: var(--fs-600);
+}
+.fs-650{
+  font-size: var(--fs-650);
 }
 .fs-700{
   font-size: var(--fs-700);

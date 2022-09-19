@@ -126,7 +126,9 @@ const getProfileUser = asyncHandler(async(req, res) =>{
       twitterUrl: profile.twitterUrl,
       youtubeUrl: profile.youtubeUrl,
       twitchUrl: profile.twitchUrl,
-      webkitURL: profile.webkitURL,
+      printerestUrl: profile.printerestUrl,
+      instagramUrl: profile.instagramUrl,
+      websitetURL: profile.webkitURL,
       location: profile.location,
     })
   }else{
@@ -154,7 +156,9 @@ const updateUserProfile = asyncHandler(async (req, res) =>{
     profile.twitterUrl = req.body.twitterUrl || profile.twitterUrl
     profile.youtubeUrl = req.body.youtubeUrl || profile.youtubeUrl
     profile.twitchUrl = req.body.twitchUrl || profile.twitchUrl
-    profile.websiteUrl = req.body.websiteUrl || profile.websiteUrl
+    profile.websitetURL = req.body.websitetURL || profile.websitetURL
+    profile.printerestUrl = req.body.printerestUrl || profile.printerestUrl
+    profile.instagramUrl = req.body.instagramUrl || profile.instagramUrl
     profile.location = req.body.location || profile.location
 
     if(req.body.password){
@@ -180,6 +184,15 @@ const updateUserProfile = asyncHandler(async (req, res) =>{
       _id: updatedUser._id,
       name: updatedUserProfile.name,
       bio: updateUserProfile.bio,
+      location: updateUserProfile.location,
+      profileImage:updatedUserProfile.profileImage,
+      facebookUrl:updatedUserProfile.facebookUrl,
+      twitterUrl:updatedUserProfile.twitterUrl,
+      youtubeUrl:updatedUserProfile.youtubeUrl,
+      twitchUrl:updatedUserProfile.twitchUrl,
+      printerestUrl:updatedUserProfile.printerestUrl,
+      instagramUrl:updatedUserProfile.instagramUrl,
+      websitetURL:updatedUserProfile.webkitURL,
       email: updatedUser.email,
       role: updatedUser.role,
       token: generateToken(updatedUser._id)

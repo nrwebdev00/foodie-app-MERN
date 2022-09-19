@@ -1,6 +1,6 @@
 import React, {  useState, useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 import { register } from '../actions/userActions';
 import logo from '../Img/logo.svg'
@@ -148,6 +148,9 @@ function Register() {
           </div>
           <div className="form-group-btn">
             <input type="submit" value='Register' className="btn submit-btn raise-up-hover-effect" />
+          </div>
+          <div className="form-group-links">
+            <Link to='/login' className='fs-650'>To login With the Foodie App Click Here.</Link>
           </div>
         </form>
       </div>
